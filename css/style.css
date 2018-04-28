@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Avenir; /* Имя шрифта */
+  src: url(fonts/avenir.otf); /* Путь к файлу со шрифтом */
+ }
+
+#logo_main{
+  max-height: 60px;
+}
+
+.navbar-brand{
+  padding-top: 0;
+}
+
+.nav.navbar-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: right;
+  padding-right: 0px;
+  background: none;
+  text-decoration-color: rgb(253, 255, 107);
+}
+
+.navbar-collapse{
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+
+@media (max-width: 767px){
+.nav.navbar-nav{  
+  float: none;
+  
+}
+
+.owl-dots{
+  display: none;
+}}
+
+hr{
+  margin: 0;
+  border: 0;
+  border-top: 2px solid rgb(54, 54, 54);
+}
+
+#nav_links{
+  font-family: 'Avenir';
+  font-size: 18px;
+}
+
+#slider_container2{
+  margin-top: 51px;
+  
+}
+
+#slider_container{
+  margin-top: 61px;
+}
+
+.owl-dots{
+  background-color: rgba(255, 255, 255, 0.418);
+  padding: 2px;
+  position: absolute;
+  border-radius: 10em;
+  top: 92%;
+  left: 45%;
+  text-align: center;
+}
+
+.owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: rgba(44, 44, 44, 0.7);
+  margin-right: 5px;
+  margin-left: 5px;
+  display: inline-block;  /*for making them horizontal, if you want vertical then you can use- display: block*/
+}
+
+.owl-dot.active{  
+  background: rgba(255, 230, 0, 0.7)  
+}
+
+.sl_container{
+  position: relative;
+}
+
+#navPrev, #navNext{
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+}
+
+#navPrev{
+  background-color: rgba(255, 251, 0, 0.5);
+  left: 10px;
+  padding: 15 28px;
+  border-radius: 10em;
+}
+
+#navNext{
+  background-color: rgba(255, 251, 0, 0.5);
+  right: 30px;
+  padding: 15 28px;
+  border-radius: 10em;
+}
+
+.filterBar{
+  background-color: rgb(255, 94, 0);
+}
+
+.HotPrev{
+  background-color:green;
+}
+
+hr.SlideChooseDivid{
+  margin: 0;
+  border: 0;
+  border-top: 5px linear-gradient(to bottom, #f1da36 0%,#fefcea 100%);
+}
+
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+-webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
+}
