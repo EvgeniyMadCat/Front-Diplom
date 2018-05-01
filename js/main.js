@@ -19,5 +19,21 @@ $(window).on('load',function(){
 
   var owl = $("#slider_container"); 
   owl.trigger('refresh.owl.carousel');
+
+  $(function () {
+    // инициализация datetimepicker7 и datetimepicker8
+    $("#datetimepicker7").datetimepicker({format:'DD.MM.YYYY'});
+    $("#datetimepicker8").datetimepicker({
+        useCurrent: false,
+        format:'DD.MM.YYYY'
+    });
+    $("#datetimepicker7").on("dp.change", function (e) {
+        $('#datetimepicker8').data("DateTimePicker").minDate(e.date);
+    });
+    $("#datetimepicker8").on("dp.change", function (e) {
+        $('#datetimepicker7').data("DateTimePicker").maxDate(e.date);
+    });
 });
+});
+
 
