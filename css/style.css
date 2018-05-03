@@ -1,7 +1,7 @@
 @font-face {
   font-family: Avenir; /* Имя шрифта */
   src: url(fonts/avenir.otf); /* Путь к файлу со шрифтом */
- }
+}
 
 #logo_main{
   max-height: 60px;
@@ -113,18 +113,25 @@ hr.name_cou_div{
   border-radius: 10em;
 }
 
+scrollfix{
+  overflow: hidden;
+}
+
 .filterBar{
   z-index: 4;
   background-color: rgb(54, 54, 54);
   color: #f1da36;
   box-shadow: 0 0 10px rgba(0,0,0,1);
   height: 100vh;
+  min-height: 700px;
 }
 
 .HotPrev{
+  overflow: auto;
   z-index: 3;
-  background-color:green;
+  background-color:whitesmoke;
   height: 100vh;
+  
 }
 
 hr.SlideChooseDivid{
@@ -142,3 +149,39 @@ hr.SlideChooseDivid{
 -moz-transform: translate3d(0,0,0);
 -ms-transform: translate3d(0,0,0);
 }
+
+img.hotimg{
+  position: absolute;
+  left: 5%;
+  max-width: 90%;
+  max-height: 20vh;
+}
+
+#singleHot{
+  border: 2px solid rgb(54, 54, 54);
+  height: max-content;
+  
+}
+
+.scrollbox::-webkit-scrollbar {width:0px;}
+.scrollbox{ -ms-overflow-style: none; }
+.scrollbox{ overflow: -moz-scrollbars-none; }
+
+.fullinfo{
+  right: 5px;
+}
+
+#description{
+  font-size: 15px;
+  color: rgb(253, 255, 107);
+  background-color: rgb(54, 54, 54);
+  overflow: auto;
+  min-height: max-content;
+  height: 112px;
+  border: 2px solid rgb(54, 54, 54);
+  border-radius: 5px; right: 10px;
+}
+
+#description::-webkit-scrollbar {width:0px;}
+#description{ -ms-overflow-style: none; }
+#description{ overflow: -moz-scrollbars-none; }
