@@ -3,6 +3,7 @@
   src: url(fonts/avenir.otf); /* Путь к файлу со шрифтом */
 }
 
+
 #logo_main{
   max-height: 60px;
 }
@@ -31,18 +32,27 @@
 
 @media (max-width: 767px){
 .nav.navbar-nav{  
-  float: none;
-  
+  float: none;}
 }
 
-.owl-dots{
-  display: none;
-}}
+@media (max-width: 767px){
+  .owl-dots{
+    display: none;
+  }
+  }
+  
+
 
 hr{
   margin: 0;
   border: 0;
   border-top: 2px solid rgb(54, 54, 54);
+}
+
+.HotelInfo{
+  background-color: #222;
+  color: rgb(255, 230, 0);
+  position: relative;
 }
 
 hr.name_cou_div{
@@ -54,12 +64,41 @@ hr.name_cou_div{
   font-size: 18px;
 }
 
-#slider_container2{
-  margin-top: 51px;  
+.HotTitle{  
+  font-size: 48px;
+  position: relative;
 }
 
-#slider_container{  
-  margin-top: 61px;
+.Comments{
+  background-color: #222;
+  color: rgb(255, 230, 0);
+  position: absolute;
+  min-height: 50vh;
+}
+
+@media (max-width: 767px){
+  .HotTitle{
+    font-size: 24px;
+  
+  }  
+}
+
+.PgShrtInf{
+  padding-left: 10px;
+}
+
+.HotelPageImage{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.HotelPageInfo{
+  padding: 0 10px 0;
+  
+}
+
+.PageTitleInfo{
+  font-size: 24px;
 }
 
 .owl-dots{
@@ -87,6 +126,7 @@ hr.name_cou_div{
 }
 
 .sl_container{
+  
   z-index: 5;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   position: relative;
@@ -113,25 +153,22 @@ hr.name_cou_div{
   border-radius: 10em;
 }
 
-scrollfix{
-  overflow: hidden;
-}
-
 .filterBar{
+  position: relative;
   z-index: 4;
   background-color: rgb(54, 54, 54);
   color: #f1da36;
   box-shadow: 0 0 10px rgba(0,0,0,1);
   height: 100vh;
-  min-height: 700px;
+  min-height: 670px;
 }
 
 .HotPrev{
+  position: relative;
   overflow: auto;
-  z-index: 3;
-  background-color:whitesmoke;
-  height: 100vh;
-  
+  z-index: 3;  
+  height: max-content;
+  max-height: 100vh;
 }
 
 hr.SlideChooseDivid{
@@ -157,10 +194,22 @@ img.hotimg{
   max-height: 20vh;
 }
 
+img.hotimg2{
+  position: absolute;
+  left: 5%;
+  max-width: 90%;
+  max-height: 120px;
+}
+
 #singleHot{
   border: 2px solid rgb(54, 54, 54);
   height: max-content;
   
+}
+
+#singleHot2{
+  border: 2px solid rgb(54, 54, 54);
+  height: max-content;
 }
 
 .scrollbox::-webkit-scrollbar {width:0px;}
@@ -185,3 +234,55 @@ img.hotimg{
 #description::-webkit-scrollbar {width:0px;}
 #description{ -ms-overflow-style: none; }
 #description{ overflow: -moz-scrollbars-none; }
+
+#sl_tp{
+  position: fixed;
+  top:0;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  background: #f60;
+  width:100%;
+  height:40px;
+  box-shadow:0 0 5px #777;
+  text-align:center;
+  color:#fff;
+  }
+   
+  #sl_in {
+  position: fixed;
+  min-height:200px;
+  top:-200px;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  background: #313131;
+  width:100%;
+  padding:10px;
+  box-sizing:padding-box;
+  }
+  #sl_tp:checked {
+  top: 200px;
+  }
+  #sl_tp:checked #sl_in {
+  top:0;
+  }
+
+  .dropdown .dropdown-menu{
+   
+  opacity: 0;
+  height: 0px;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -ms-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
+  transition: all 500ms ease-in;
+}
+.dropdown:hover .dropdown-menu{
+  
+  opacity: 1;
+  height: max-content;
+}
+

@@ -34,6 +34,8 @@ $(window).on('load',function(){
         $('#datetimepicker7').data("DateTimePicker").maxDate(e.date);
     });
 });
+
+
 });
 
 

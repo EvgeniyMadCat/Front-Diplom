@@ -1,0 +1,143 @@
+<html>
+
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fontawesome-all.css">
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/moment-with-locales.min.js"></script>
+        <script src="js/bootstrap-datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="libs/owl-carousel/dist/assets/owl.carousel.css">
+        <link rel="stylesheet" href="libs/owl-carousel/dist/assets/owl.theme.default.css">
+        <script> 
+            slider = document.getElementById('slider_container2');
+            var folder = "hotel_images/1/";
+        
+            
+                url : folder,
+                success: function (data) {
+                    $(data).find("a").attr("href", function (i, val) {
+                        if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                        $("slider").append( "<div class="owl-item"><img src='"+ folder + val +"'></div>" );
+                                } 
+                            });
+                        }
+                    
+        </script>
+</head>
+
+<body>
+    <div class="container col-xs-12">
+        <div class="row col-xs-12">
+            <!-- Панель навигации -->
+            <div class="navbar navbar-inverse navbar-fixed-top"> 
+                                <div class="container">
+                                        <div class="navbar-header">
+                                                <a class="navbar-brand" href="index.html">
+                                                        <img src="img/HotHOTEL2.png" alt="" id="logo_main">
+                                                </a>
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sos">
+                                                        <span class="sr-only">Навигация
+                                                                <b class="caret"></b>
+                                                        </span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                </button>
+                                        </div>
+                                        <div class="collapse navbar-collapse" id="sos">
+                                                <ul class="nav navbar-nav">
+                                                        <li>
+                                                                <a class="navPanBut" href="#">
+                                                                        <span class="fas fa-address-card fa-2x hidden-md hidden-lg hidden-sm"></span> About Us</a>
+                                                        </li>
+                                                        
+                                                        <li>
+                                                                <a class="navPanBut" href="#">
+                                                                        <span class="fas fa-fax fa-2x hidden-md hidden-lg hidden-sm"></span> Contact Us</a>
+                                                        </li>
+                                                        <hr class="hidden-md hidden-lg hidden-sm" color="#000000" size="2">
+                                                        <li>
+                                                                <a class="navPanBut" href="#">
+                                                                        <span class="fas fa-user-circle fa-2x hidden-md hidden-lg hidden-sm"></span> Log In/Register</a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                </div>
+            </div>
+            <!-- ---------------- -->
+        </div>
+        <br><br><br>
+        <div class="row col-xs-12">
+            <label class="HotTitle col-xs-12 text-center">BURJ AL-ARAB DUBAI 7*</label>
+        </div>        
+        <!-- Слайдер прокрутки фотографий на главной странице (Для больших и малых устройств отдельно) 
+        <div class="sl_container hidden-xs col-xs-12">
+            <div id="navPrev" class="fas fa-angle-left fa-3x"></div>
+            <div id="navNext" class="fas fa-angle-right fa-3x"></div>
+            <div id="slider_container" class="owl-carousel">
+                
+                    <div class="owl-item"><img src="img/carousel1.jpg" alt=""></div>
+                    <div class="owl-item"><img src="img/carousel2.jpg" alt=""></div>
+                    <div class="owl-item"><img src="img/carousel3.jpg" alt=""></div>
+                    <div class="owl-item"><img src="img/carousel4.jpg" alt=""></div>
+                    <div class="owl-item"><img src="img/carousel5.jpg" alt=""></div>
+            </div>              
+        </div>
+        <div id="slider_container2" class="owl-carousel hidden-sm hidden-md hidden-lg col-xs-12">              
+
+            
+               
+        </div>
+         -->
+        <div class="row col-xs-12 HotelInfo">
+            <div class="hidden-xs col-sm-3" style="background:rgb(15, 15, 15); border-right: 2px solid rgb(253, 255, 107); box-shadow: 0 0 10px rgba(0,0,0,0.5);">                
+                <img src="img/hotel1.jpg" class="HotelPageImage" alt="">
+                <div class="PgShrtInf">
+                    <label class="fas fa-star"></label> - <label>9.9</label><br>
+                    <label class="fas fa-dollar-sign"></label> - <label>1500$-3700$</label><br>
+                    <label class="fas fa-map-marker-alt"></label> - <label>Dubai, UAE</label>
+                </div>
+            </div>
+
+            <div class="HotelPageInfo col-xs-12 col-sm-9">
+                <br>
+                <div class="PageTitleInfo">
+                    <label for="title">BURJ AL-ARAB DUBAI 7*</label>                   
+                </div>
+                
+                <label for="desc">Description:</label> <label id="PageDescription">The Burj Al Arab (Arabic: برج العرب‎, Tower of the Arabs) is a luxury hotel located in Dubai, United Arab Emirates. It is the third tallest hotel in the world (although 39% of its total height is made up of non-occupiable space). Burj Al Arab stands on an artificial island 280 m (920 ft) from Jumeirah Beach and is connected to the mainland by a private curving bridge. The shape of the structure is designed to resemble the sail of a ship. It has a helipad near the roof at a height of 210 m (689 ft) above ground.<br><br> The beachfront area where Burj Al Arab and Jumeirah Beach Hotel are located was previously called Miami Beach. The hotel is located on an island of reclaimed land 280 meters offshore of the beach of the former Chicago Beach Hotel. The locale's name had its origins in the Chicago Bridge & Iron Company which at one time welded giant floating oil storage tanks, known locally as Kazzans on the site.
+
+                        The old name persisted after the old hotel was demolished in 1997. Dubai Chicago Beach Hotel remained as the Public Project Name for the construction phase of Burj Al Arab Hotel until Sheikh Mohammed bin Rashid Al Maktoum announced the new name.</label>
+            </div>
+            <div class="hidden-sm hidden-md hidden-lg col-xs-12" style="background:rgb(15, 15, 15); padding-top: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">                
+                <div class="PgShrtInf">
+                    <label class="fas fa-star"></label> - <label>9.9</label><br>
+                    <label class="fas fa-dollar-sign"></label> - <label>1500$-3700$</label><br>
+                    <label class="fas fa-map-marker-alt"></label> - <label>Dubai, UAE</label>
+                </div>
+            </div>
+        </div>        
+        <hr width="100%" class="name_cou_div" size="2">
+        <div class="row col-xs-12"><br>
+            <label class="HotTitle col-xs-12 text-center">COMMENTS:</label>
+        </div>
+        <hr width="100%" class="name_cou_div" size="2">
+        <div class="row col-xs-12 Comments">
+            <div class="hidden-xs col-sm-12 commentauthor" style="background: rgb(78, 78, 78);"><span class="col-sm-3 text-center" style="padding: 5px 5px 0px;">Dexter (USA):</span> <span class="col-sm-9" style="background: #222; padding: 5px 5px 0px;">Amazing place for business or just for having fun. I had a president LUX. There's a lot of pace. Service is very very good. Well, it's 7* hotel after all.</span></div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg commentauthor" style="background: rgb(78, 78, 78); padding: 5px 5px 0px; margin-bottom: 5px;">Dexter (USA):</div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg commentcontent" style="padding: 5px 5px 0px;">Amazing place for business or just for having fun. I had a president LUX. There's a lot of pace. Service is very very good. Well, it's 7* hotel after all. </div>
+            <hr width="100%" class="name_cou_div" size="2">
+        </div>
+    </div>
+    <script src="libs/owl-carousel/dist/owl.carousel.min.js"></script>
+    <script src="libs/owl-carousel/src/js/owl.navigation.js"></script>
+    
+</body>
+
+</html>
